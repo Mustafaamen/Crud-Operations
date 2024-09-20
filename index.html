@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<!-- <img src="./imgs/1_New1.jpg" alt=""> -->
+<body>
+  <div class="crud w-75 mx-auto bg-secondary p-3">
+    <!-- <h1 class="text-center text-capitalize text-white">crud operations</h1> -->
+    <div class="form-floating mb-3">
+      <input oninput="validation(this)" type="text" class="form-control" id="nameInput" placeholder="">
+      <div id="alertName" class="alert alert-danger py-1 mt-1 d-none" role="alert">
+        <small> Please enter the name correctly..!</small>
+      </div>
+      <label for="nameInput">Name</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input oninput="validation(this)" type="number" class="form-control" id="nameAge" placeholder="">
+      <div id="alertAge" class="alert alert-danger py-1 mt-1 d-none" role="alert">
+        <small> Please enter the age correctly, such as 24?</small>
+      </div>
+      <label for="nameAge">Age</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input oninput="validation(this)" type="text" class="form-control" id="namePhone" placeholder="">
+      <div class="alert alert-danger py-1 mt-1 d-none" role="alert">
+        <small> Please enter the mobile number correctly, such as the one starting with 010, +2 or 0200.!</small>
+      </div>
+      <label for="namePhone">Phone</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input oninput="validation(this)" type="text" class="form-control" id="nameTrack" placeholder="">
+      <div class="alert alert-danger py-1 mt-1 d-none" role="alert">
+        <small>Please enter the specialty correctly such as (Front End..).!</small>
+      </div>
+      <label for="nameTrack">Track</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input oninput="validation(this)" type="text" class="form-control" id="nameAddres" placeholder="">
+      <div class="alert alert-danger py-1 mt-1 d-none" role="alert">
+        <small>Please enter the address correctly..!</small>
+      </div>
+      <label for="nameAddres">Addres</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input oninput="validation(this)" type="email" class="form-control" id="nameEmail" placeholder="">
+      <div class="alert alert-danger py-1 mt-1  d-none  " role="alert">
+        <small>Please enter the email correctly, such as:(mustafaelhadad241@gmail.com).!</small>
+      </div>
+      <label for="nameEmail">Email</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="file" class="form-control" id="nameImg" placeholder="">
+      <label for="nameImg">Img</label>
+    </div>
+    <button id="add" onclick="Add()" class="btn btn-danger">Add</button>
+    <button id="update" onclick="updateForm()" class="btn btn-warning d-none ">Update</button>
+    <input oninput="search()" class="form-control w-50 mx-auto" id="search" placeholder="Search....">
+  </div>
+
+  <table class="table w-75 mx-auto mt-3 text-center">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Track</th>
+        <th>Addres</th>
+        <th>Email</th>
+        <th>Img</th>
+        <th>Delete</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+    <tbody id="demo">
+
+    </tbody>
+
+  </table>
+
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
